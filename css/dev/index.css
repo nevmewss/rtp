@@ -862,11 +862,12 @@ body {
 }
 .card__list {
   margin-bottom: 3rem;
-  max-width: 62.5rem;
+  max-width: 19.9375rem;
 }
 .card__list li {
   list-style: none;
   font-size: 1.125rem;
+  line-height: 110%;
 }
 .card__text {
   font-size: 1rem;
