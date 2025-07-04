@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const question3Block = document.querySelector(".q_3");
   const claimBlock = document.querySelector(".claim");
   const cornerBlock = document.querySelector(".corner");
+  const linksBlock = document.querySelector(".links-page");
   const predictBlock = document.querySelector(".predict");
   const storeBlock = document.querySelector(".store");
   const cardBlock = document.querySelector(".card");
@@ -132,8 +133,8 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       cornerBlock.classList.remove("active");
       cornerBlock.classList.add("hidden");
-      predictBlock.classList.remove("hidden");
-      predictBlock.classList.add("active");
+      linksBlock.classList.remove("hidden");
+      linksBlock.classList.add("active");
     });
   });
   predictButton.addEventListener("click", (e) => {

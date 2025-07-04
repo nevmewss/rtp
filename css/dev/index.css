@@ -139,12 +139,12 @@ body {
 .ready {
   background: url("../assets/img/ready/bg.webp") center no-repeat;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
   align-items: center;
+  padding-top: 6.25rem;
 }
 .ready__logo {
-  padding-top: 6.25rem;
+  padding-top: 0rem;
   margin-bottom: 5rem;
   animation: readyStep1 0.5s ease forwards;
 }
@@ -176,6 +176,7 @@ body {
 .ready__button {
   transform: scale(0);
   animation: readyStep1 0.5s ease 1s forwards;
+  padding: 1rem 4.75rem;
 }
 .fight {
   background: url("../assets/img/fight/bg.webp") center no-repeat;
@@ -210,7 +211,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.9375rem;
-  margin-bottom: 21.125rem;
+  margin-bottom: 20rem;
 }
 .fight__title::before {
   content: "";
@@ -257,7 +258,7 @@ body {
   gap: 1.5625rem;
 }
 .fight__button {
-  padding: 1rem 1.6875rem;
+  width: 10.5rem;
 }
 .out {
   opacity: 0;
@@ -307,7 +308,7 @@ body {
   }
 }
 .out__button {
-  margin-top: 7.125rem;
+  margin-top: 1.25rem;
   padding: 1rem 4.75rem;
   animation: outStep2 0.5s ease 1s forwards;
   transform: scale(0);
@@ -333,7 +334,8 @@ body {
   background: url("../assets/img/fight/decor.svg") center/cover no-repeat;
 }
 .txt_title {
-  max-width: 21.625rem;
+  max-width: 31.25rem;
+  text-transform: uppercase;
 }
 .q_1 {
   padding: 0.625rem;
@@ -359,9 +361,9 @@ body {
 .q_1--content {
   position: relative;
   padding-top: 2.375rem;
-  padding-bottom: 2.375rem;
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.4375rem;
+  padding-right: 1.4375rem;
 }
 .q_1--content::before, .q_1--content::after {
   content: "";
@@ -405,11 +407,11 @@ body {
   color: #fedc28;
   text-transform: uppercase;
   font-weight: 700;
-  margin-bottom: 5.625rem;
+  margin-bottom: 4rem;
 }
 .q_1--label {
   font-weight: 600;
-  margin-bottom: 5.25rem;
+  margin-bottom: 4rem;
   max-width: 21.25rem;
 }
 .q_1--btn {
@@ -494,7 +496,7 @@ body {
   display: block;
   background-color: rgba(255, 255, 255, 0.1);
   border: 0.0625rem solid #efefe8;
-  padding: 1.3125rem 2.5rem;
+  padding: 1.3125rem 1.6875rem;
   text-align: center;
   color: #efefe8;
   font-size: 1.125rem;
@@ -505,6 +507,7 @@ body {
 .q_3 {
   text-align: center;
   padding: 0.625rem;
+  padding-top: 1.6875rem;
   opacity: 0;
   pointer-events: none;
   display: none;
@@ -542,21 +545,8 @@ body {
   margin: 0 auto;
   margin-bottom: 1.5rem;
 }
-.claim {
-  opacity: 0;
-  pointer-events: none;
-  display: none;
-  transition: opacity 0.5s ease;
+.page__claim {
   padding-top: 3.75rem;
-  animation: claim 0.5s ease forwards;
-}
-@keyframes claim {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 .claim.active {
   display: flex;
@@ -646,24 +636,18 @@ body {
   margin-bottom: 1.625rem;
 }
 .predict {
-  padding: 3.125rem 1.5625rem;
-  opacity: 0;
-  pointer-events: none;
-  display: none;
-  transition: opacity 0.4s ease;
   background: url("../assets/img/predict/bg.webp") center no-repeat;
-  animation: rotate 0.3s ease forwards;
-}
-.predict img {
-  margin-bottom: 0.5625rem;
-}
-.predict.active {
+  min-height: 50rem;
+  padding-top: 2.5rem;
   display: flex;
   opacity: 1;
   pointer-events: auto;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+.predict img {
+  margin-bottom: 0.5625rem;
 }
 .predict__heading {
   font-size: 1.125rem;
@@ -681,7 +665,7 @@ body {
   margin-bottom: 0.75rem;
 }
 .predict__body {
-  padding: 1.25rem 0rem 1.25rem 1rem;
+  padding-top: 1.25rem;
 }
 .predict__title {
   font-weight: 700;
@@ -733,13 +717,15 @@ body {
   font-weight: 600;
 }
 .store {
-  opacity: 0;
-  pointer-events: none;
-  display: none;
-  transition: opacity 0.4s ease;
-  animation: store 0.5s ease forwards;
+  padding-top: 3.125rem;
   background: url("../assets/img/store/bg.webp") center no-repeat;
-  min-height: 100vh;
+  min-height: 50rem;
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .store img {
   margin-bottom: 0.5625rem;
@@ -752,16 +738,7 @@ body {
     opacity: 1;
   }
 }
-.store.active {
-  display: flex;
-  opacity: 1;
-  pointer-events: auto;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 .store__heading {
-  padding-top: 4.5625rem;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -812,26 +789,10 @@ body {
   position: relative;
   z-index: 2;
 }
+.page__card {
+  margin-top: 0.625rem;
+}
 .card {
-  opacity: 0;
-  pointer-events: none;
-  display: none;
-  transition: opacity 0.4s ease;
-  animation: card 0.5s ease forwards;
-}
-@keyframes card {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.card img {
-  max-width: 18.9375rem;
-  margin-bottom: 2.625rem;
-}
-.card.active {
   display: flex;
   opacity: 1;
   pointer-events: auto;
@@ -839,18 +800,15 @@ body {
   align-items: center;
   text-align: center;
 }
+.card img {
+  max-width: 18.9375rem;
+  margin-bottom: 2.625rem;
+}
 .card__body {
   background: url("../assets/img/card/bg.webp") center no-repeat;
-  margin-top: 3.4375rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  min-height: 39.9375rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  padding-left: 0.8125rem;
-  margin-bottom: 3.4375rem;
+  min-height: 46.875rem;
+  padding-top: 3.125rem;
 }
 .card__title {
   max-width: 21.4375rem;
@@ -863,6 +821,7 @@ body {
 .card__list {
   margin-bottom: 3rem;
   max-width: 19.9375rem;
+  transform: translate(0.8125rem, 0rem);
 }
 .card__list li {
   list-style: none;
@@ -874,21 +833,14 @@ body {
   line-height: 130%;
   font-weight: 300;
   font-style: italic;
+  padding: 1.875rem;
+  margin-top: -6.25rem;
+  text-align: left;
 }
 .card__text span {
   color: #fedc28;
 }
 .form {
-  opacity: 0;
-  pointer-events: none;
-  display: none;
-  transition: opacity 0.4s ease;
-  background: url("../assets/img/form/bg.webp") center no-repeat;
-  min-height: 100vh;
-  padding: 0.625rem;
-  padding-top: 6.25rem;
-}
-.form.active {
   display: flex;
   opacity: 1;
   pointer-events: auto;
@@ -926,9 +878,32 @@ body {
 }
 .form__button {
   margin-bottom: 1rem;
+  width: 100%;
 }
 .form__links {
   display: flex;
   align-items: center;
   gap: 2.5rem;
+}
+.links-page__arr {
+  text-align: center;
+}
+.links-page__arr-2 {
+  text-align: center;
+  transform: translate(0rem, -0.9375rem);
+}
+@media (max-width: 47.99875em){
+  .out {
+    background-size: cover;
+  }
+}
+@media (max-width: 29.99875em){
+  .fight {
+    background-size: cover;
+  }
+}
+@media (max-width: 23.125em){
+  .fight__button {
+    width: 8.75rem;
+  }
 }
